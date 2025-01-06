@@ -66,6 +66,7 @@ trait AuthController
                     'apiKey' => Util::getShopifyConfig('api_key', $shopOrigin),
                     'appBridgeVersion' => Util::getShopifyConfig('appbridge_version') ? '@'.config('shopify-app.appbridge_version') : '',
                     'authUrl' => $result['url'],
+                    'url' => $result['url'],
                     'host' => $request->get('host') ?? base64_decode($shopDomain),
                     'shopDomain' => $shopDomain,
                     'locale' => $request->get('locale'),
